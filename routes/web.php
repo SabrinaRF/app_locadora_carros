@@ -17,11 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('Carro','CarroController');
-Route::resource('Cliente','ClienteController');
-Route::resource('Locacao','LocadoraController');
-Route::resource('Marca','MarcaController');
-Route::resource('Modelo','ModeloController');
+
 
 
 
