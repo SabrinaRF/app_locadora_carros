@@ -19,10 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::apiResource('Cliente','App\Http\Controllers\ClienteController');
-Route::apiResource('Carro','App\Http\Controllers\CarroController');
-Route::apiResource('Marca','App\Http\Controllers\MarcaController');
-Route::apiResource('Modelo','App\Http\Controllers\ModeloController');
-Route::apiResource('Locacao','App\Http\Controllers\LocacaoController');
+Route::apiResource('Cliente','ClienteController');
+Route::apiResource('Carro','CarroController');
+Route::apiResource('Marca','MarcaController');
+Route::apiResource('Modelo','ModeloController');
+Route::apiResource('Locacao','LocacaoController');
 
 
