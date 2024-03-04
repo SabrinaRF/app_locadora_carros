@@ -14,7 +14,8 @@ class MarcaController extends Controller
      */
     public function index()
     {
-        //
+        $marca = Marca::all();
+        return $marca;
     }
 
     /**
@@ -37,18 +38,7 @@ class MarcaController extends Controller
      */
     public function show(Marca $marca)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Marca  $marca
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Marca $marca)
-    {
-        //
+        return $marca;
     }
 
     /**
@@ -60,7 +50,10 @@ class MarcaController extends Controller
      */
     public function update(Request $request, Marca $marca)
     {
-        //
+
+        $marca->update($request->all());
+        return $marca;
+
     }
 
     /**
