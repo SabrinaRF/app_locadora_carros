@@ -20,7 +20,9 @@ class ModeloController extends Controller
      */
     public function index()
     {
-        //
+        
+        $modelos = $this->modelo->all();
+        return response()->json($modelos,200);
     }
 
     /**
