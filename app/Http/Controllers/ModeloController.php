@@ -26,16 +26,6 @@ class ModeloController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -43,7 +33,23 @@ class ModeloController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate($this->modelo->rules(),$this->modelo->feedback());
+
+        $imagem = $request->file('imagem');
+        $imagem_urn = $imagem->store('imagens','public');
+
+        $modelo = $this->modelo->create([
+            'marca_id' => $request->marca,
+            'nome'=> $request->nome,
+            'imagem'=> $imagem_urn,
+            'numero_portas' => $request->numero_port,
+            'lugares' => $request->lugares,
+            'air_bag' => $request->air_bag,
+            'abs' => $request->abs
+        ]);
+
+       
+        return response()->json($modelo, 201);
     }
 
     /**
