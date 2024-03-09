@@ -55,12 +55,16 @@ class ModeloController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Modelo  $modelo
+     * @param  id
      * @return \Illuminate\Http\Response
      */
-    public function show(Modelo $modelo)
+    public function show($id)
     {
-        //
+        $modelo = $this->modelo->find($id);
+        if($modelo === null){
+            return response()->json(['erro' => 'Impossível localizar o modelo'],404);//['erro'=>'msg'];
+        }
+        return response()->json($modelo, 200);
     }
 
     /**
