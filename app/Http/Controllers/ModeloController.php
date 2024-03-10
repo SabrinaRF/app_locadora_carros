@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Modelo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ModeloController extends Controller
 {
@@ -96,8 +97,18 @@ class ModeloController extends Controller
      * @param  \App\Models\Modelo  $modelo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Modelo $modelo)
+    public function destroy($id)
     {
-        //
+        $modelo = $this->modelo->find($id);
+        if($modelo === null){
+            return response()->json(['erro' => 'Impossível realizar a exclusão, modelo não existe'],404);//['erro'=>'msg'];
+        }
+        
+        //remove o arquivo antigo
+        Storage::disk('public')->delete($modelo->imagem);
+        
+
+        $modelo->delete();
+        return response()->json(['msg'=>'A modelo foi excluida'], 200);
     }
 }
