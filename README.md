@@ -7,11 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## API RESTfull
+## API 
 
 Este repositório foi desenvolvido utilizando o framework Laravel e a linguagem PHP. O objetivo principal deste projeto é fornecer uma solução para uma locadora de carros, oferecendo uma API RESTful para operações CRUD (Create, Read, Update, Delete) sobre os recursos disponíveis na locadora.
 
-### Principais Características:
+### Objetivos:
 
 - Implementação de uma API Web Services RESTful: O projeto adota os princípios de arquitetura REST para disponibilizar endpoints que permitem interações com os recursos da locadora de carros de forma eficiente e escalável.
 
