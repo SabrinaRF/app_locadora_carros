@@ -12,11 +12,11 @@ class Modelo extends Model
 
     public function rules(){
         return [
-            'marca_id'=>'exists:marca,id',
-            'nome'=> 'required|unique:marcas|min:3',
-            'imagem'=> 'required|file|mimes:png',
-            'numero_portas'=> 'required|integer|between:1,5',
-            'lugares'=> 'required|integer|digits_between:1,5',
+            'marca_id'=>'exists:marcas,id',
+            'nome'=> 'required|unique:modelos|min:3',//,nome'.$this->id.'
+            'imagem'=> 'required|file|mimes:png,jpeg,jpg',
+            'numero_portas'=> 'required|integer|digits_between:1,5',
+            'lugares'=> 'required|integer|digits_between:1,10',
             'air_bag'=> 'required|boolean',
             'abs'=> 'required|boolean'
 
