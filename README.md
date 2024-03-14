@@ -13,7 +13,17 @@ Este repositório foi desenvolvido utilizando o framework Laravel e a linguagem 
 
 ### Objetivos:
 
-- Implementação de uma API Web Services RESTful: O projeto adota os princípios de arquitetura REST para disponibilizar endpoints que permitem interações com os recursos da locadora de carros de forma eficiente e escalável.
+- Implementação de uma API WebService RESTful: A arquitetura do projeto segue os princípios REST, oferecendo endpoints que possibilitam interações eficientes com os recursos da locadora de carros.
+
+- Modelos Disponíveis:
+ 
+    - Marca: Representa as diferentes marcas de carros disponíveis na locadora.
+    - Modelo: Descreve os modelos específicos de carros associados a cada marca.
+    - Carro: Refere-se aos carros disponíveis para locação na locadora.
+    - Cliente: Armazena informações sobre os clientes da locadora.
+    - Locação: Registra as locações realizadas pelos clientes.
+
+- Implementação do Design Pattern - Repository: O projeto segue o padrão de design Repository, estabelecendo uma relação entre os controladores (Controllers), os repositórios (Repositories) e os modelos (Models), garantindo uma separação clara das responsabilidades e facilitando a manutenção e extensibilidade do código.
 
 - Autenticação de API com Autorização JWT (JSON Web Token): A API utiliza o padrão JWT para autenticar e autorizar os usuários que acessam os recursos protegidos. Isso proporciona uma camada adicional de segurança, garantindo que apenas usuários autorizados possam realizar determinadas operações na API.
 
