@@ -9,11 +9,11 @@
 
 ## API 
 
-Este repositório foi desenvolvido utilizando o framework Laravel e a linguagem PHP. O objetivo principal deste projeto é fornecer uma solução para uma locadora de carros, oferecendo uma API RESTful para operações CRUD (Create, Read, Update, Delete) sobre os recursos disponíveis na locadora.
+Este repositório foi desenvolvido utilizando o framework Laravel e a linguagem PHP. O objetivo principal deste projeto é fornecer uma solução para uma locadora de carros, oferecendo uma API REST para operações CRUD (Create, Read, Update, Delete) sobre os recursos disponíveis na locadora.
 
 ### Objetivos:
 
-- Implementação de uma API WebService RESTful: A arquitetura do projeto segue os princípios REST, oferecendo endpoints que possibilitam interações eficientes com os recursos da locadora de carros.
+- Implementação de uma API WebService REST: A arquitetura do projeto segue os princípios REST, oferecendo endpoints que possibilitam interações eficientes com os recursos da locadora de carros.
 
 - Modelos Disponíveis:
  
@@ -36,8 +36,8 @@ Passos para Testar:
 
 1. Faça o download e instale o Postman.
 2. Abra o Postman e crie uma nova solicitação.
-3. Insira o URL do endpoint que deseja testar (por exemplo, http://localhost:8000/api/marcas para listar todas as marcas).
-4. Escolha o método HTTP apropriado (GET, POST, PUT, DELETE) de acordo com a operação desejada.
+3. Insira o URL do endpoint que deseja testar (por exemplo, http://localhost:8000/api/marca para listar todas as marcas).
+4. Escolha o método HTTP apropriado (GET, POST, PUT, PATCH e DELETE) de acordo com a operação desejada.
 5. Adicione os parâmetros necessários, como dados de entrada no corpo da solicitação ou parâmetros de consulta na URL.
 6. Envie a solicitação e analise a resposta recebida para verificar se a operação foi realizada corretamente.
 7. Explore outros endpoints da API para testar diferentes funcionalidades, como criação, atualização e exclusão de recursos.
