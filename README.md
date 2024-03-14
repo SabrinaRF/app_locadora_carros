@@ -29,3 +29,17 @@ Este repositório foi desenvolvido utilizando o framework Laravel e a linguagem 
 
 - Respostas HTTP: A API fornece respostas HTTP adequadas para cada solicitação, seguindo as melhores práticas de desenvolvimento web. Isso inclui o uso de códigos de status HTTP apropriados, como 200 (OK), 201 (Created), 400 (Bad Request), 401 (Unauthorized), entre outros, para comunicar o resultado de cada requisição.
 
+### Teste da API com Postman:
+Para testar as funcionalidades da API, foi utilizado o Postman, uma ferramenta popular para testes de API que permite enviar solicitações HTTP para os endpoints da sua API e analisar as respostas recebidas.
+
+Passos para Testar:
+
+1. Faça o download e instale o Postman.
+2. Abra o Postman e crie uma nova solicitação.
+3. Insira o URL do endpoint que deseja testar (por exemplo, http://localhost:8000/api/marcas para listar todas as marcas).
+4. Escolha o método HTTP apropriado (GET, POST, PUT, DELETE) de acordo com a operação desejada.
+5. Adicione os parâmetros necessários, como dados de entrada no corpo da solicitação ou parâmetros de consulta na URL.
+6. Envie a solicitação e analise a resposta recebida para verificar se a operação foi realizada corretamente.
+7. Explore outros endpoints da API para testar diferentes funcionalidades, como criação, atualização e exclusão de recursos.
+8. Com o Postman, você pode facilmente explorar e testar todas as funcionalidades oferecidas pela API da locadora de carros, garantindo sua eficácia e confiabilidade.
+
