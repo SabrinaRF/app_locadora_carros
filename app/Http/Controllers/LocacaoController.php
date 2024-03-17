@@ -86,7 +86,7 @@ class LocacaoController extends Controller
     {
         $locacao = $this->locacao->find($id);
         if ($locacao === null) {
-            return response()->json(['erro' => 'Impossível localizar a locacao'], 404);
+            return response()->json(['erro' => 'Impossível localizar a locação'], 404);
         }
         return response()->json($locacao, 200);
     }
