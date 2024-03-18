@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -22,14 +23,18 @@ class AuthController extends Controller
 
     public function logout()
     {
-        return 'logout';
+        auth()->logout();
+
+        return response()->json(['message' => 'Logout realizado com suuceso!']);
     }
     public function refresh()
     {
-        return 'refresh';
+        $token = auth('api')->refresh();
+
+        return response()->json(['token' =>$token]);
     }
     public function me()
     {
-        return 'me';
+        return response()->json(auth()->user());
     }
 }
