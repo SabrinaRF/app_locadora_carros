@@ -15,5 +15,27 @@
 </template>
 
 <script>
+    export default {
+            props: ['csrf_token'],
+            data(){
+                return {
+                    input_id:'',
+                    input_nome:''
+                }
+            },
+            method: {
+                pesquisar(e){
+                    let url = 'http://localhost:8000/api/marcas'
+                    let configuracao = {
+                        method: 'post',
+                        body: new URLSearchParams( {
+                            'id' : this.input_id,
+                            'nome' : this.input_nome
+                        })
+                    }
+                }
+            }
+        }
+
 
 </script>
