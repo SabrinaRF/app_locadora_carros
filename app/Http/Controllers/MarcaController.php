@@ -23,7 +23,7 @@ class MarcaController extends Controller
      */
     public function index(Request $request)
     {
-        
+        /*
         $marcaRepository = new MarcaRepository($this->marca);
         
         if ($request->has('atributos_modelos')) {
@@ -43,7 +43,7 @@ class MarcaController extends Controller
         }
         
         return response()->json($marcaRepository->getResultado(),200);
-
+*/
     }
 
     /**
